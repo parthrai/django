@@ -19,6 +19,9 @@ def check(request, pk):
     songs = Song.objects.filter(album_id=pk).all()
     print("VVVVVVVVVVVVVVVVVVVVVVVVVVVVVV")
     return render(request, 'music/album_detail.html', {'songs': songs, 'album': album})
+	
+def url_redirect(request):
+    return HttpResponseRedirect("/music/")	
 
 class IndexView(generic.ListView):
     template_name = 'music/index.html'
