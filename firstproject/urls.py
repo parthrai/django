@@ -7,7 +7,8 @@ urlpatterns = [
    
     url(r'^admin/', admin.site.urls),
     url(r'^music/', include('music.urls')),
-   url(r'^$', HttpResponseRedirect('music/')),
+    url(r'^$', include('music.urls')),
+   
 ]
 
 if settings.DEBUG:
