@@ -22,7 +22,7 @@ SECRET_KEY = '46&@l4&4s@wss4s7v*7*5tf9e+!7mvxha%r!*aya-+&tb+1#md'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sarth-sharma-project.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
