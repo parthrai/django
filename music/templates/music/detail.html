@@ -1,0 +1,59 @@
+{% extends 'music/base.html' %}
+{% block title %}Album Details{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  toppad" >
+
+
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ album.album_title }} By {{ album.artist }}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center">
+                    <img alt="User Pic" src="/media/{{ album.album_logo }}" class="img-responsive">
+                </div>
+
+                <div class=" col-md-9 col-lg-9 ">
+                    <table class="table">
+    <thead>
+      <tr>
+        <th>Song Title</th>
+        <th>Audio Type</th>
+        <th>Favorite</th>
+      </tr>
+
+    </thead>
+    <tbody>
+    {%  for song in songs %}
+    <tr>
+        <p>{{ song.title }}</p>
+    </tr>
+
+    {%  endfor %}
+    </tbody>
+  </table>
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                    </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+{% endblock %}
